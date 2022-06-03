@@ -1,9 +1,8 @@
 package com.javakaian.webtoon.repository;
 
-import com.javakaian.webtoon.models.Days;
 import com.javakaian.webtoon.models.Genre;
+import com.javakaian.webtoon.models.NewEpisodeDay;
 import com.javakaian.webtoon.models.Webtoon;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -25,17 +24,13 @@ public class WebtoonRepo {
         wt.setAuthorName("SIU");
         wt.setDescription("A very high quality webtoon");
         wt.setGenre(Genre.FANTASY);
-        wt.setNewEpisodeDay(Days.MONDAY);
+        wt.setNewEpisodeDay(NewEpisodeDay.MONDAY);
         wt.setRate(9.5f);
         wt.setFollowerNumber(111);
         wt.setViewNumber(2222);
         wt.setTumbnailURL("tubnail.com");
         wt.setBackgroudImageURL("background.com");
 
-        this.webtoons.add(wt);
-        this.webtoons.add(wt);
-        this.webtoons.add(wt);
-        this.webtoons.add(wt);
 
     }
 
@@ -46,5 +41,9 @@ public class WebtoonRepo {
 
     public List<Webtoon> getWebtoons() {
         return webtoons;
+    }
+
+    public void addWebtoon(Webtoon webtoon){
+        this.webtoons.add(webtoon);
     }
 }

@@ -1,11 +1,12 @@
 package com.javakaian.webtoon.models;
 
-public enum Days {
+public enum NewEpisodeDay {
     SUNDAY,
     MONDAY,
     TUESDAY,
     WEDNESDAY,
     THURSDAY,
     FRIDAY,
-    SATURDAY
+    SATURDAY,
+    COMPLETED
 }

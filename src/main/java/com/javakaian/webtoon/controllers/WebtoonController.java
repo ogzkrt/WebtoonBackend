@@ -3,9 +3,7 @@ package com.javakaian.webtoon.controllers;
 
 import com.javakaian.webtoon.models.Webtoon;
 import com.javakaian.webtoon.repository.WebtoonRepo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +21,13 @@ public class WebtoonController {
         return repo.getWebtoons();
     }
 
+    @PostMapping("/add")
+    public void addWebtoon(@RequestBody Webtoon webtoon){
+        repo.addWebtoon(webtoon);
+    }
+
+    @PutMapping("/update")
+    public void updateWebtoon(Webtoon webtoon){
+
+    }
 }

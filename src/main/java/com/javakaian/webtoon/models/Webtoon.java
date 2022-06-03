@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -19,7 +20,7 @@ public class Webtoon {
     private int followerNumber;
     private int viewNumber;
     private float rate;
-    private Days newEpisodeDay;
+    private NewEpisodeDay newEpisodeDay;
 
     private String tumbnailURL;
     private String backgroudImageURL;
